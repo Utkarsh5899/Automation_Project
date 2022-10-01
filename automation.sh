@@ -40,3 +40,10 @@ fi
 
 sudo apt-get update
 sudo apt-get install git
+
+
+
+if [[ ! -f /etc/cron.d/automation ]];then
+echo "* * * * * root /root/Automation_Project/automation.sh" >> /etc/cron.d/automation
+fi
+
